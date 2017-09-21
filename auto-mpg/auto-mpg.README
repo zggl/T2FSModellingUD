@@ -1,0 +1,3 @@
+classifying on the number of cylinders
+because mpg is a non-integer
+This data set is probably useless because plain-old ID3 gives 0.93 accuracy.
