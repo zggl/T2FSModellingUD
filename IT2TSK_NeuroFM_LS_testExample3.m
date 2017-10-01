@@ -1,7 +1,7 @@
 %% SECTION TITLE
 clc,clear
 %% praparing data
-J_max=4;
+J_max=8;
 DNum=100;
 In=linspace(0,2,DNum);
 In_dim=size(In');
@@ -81,7 +81,15 @@ for inputnum=1:n
     legrul={};    
     for i=1:J_max
         if i<J_max
-            legrul{i}=strcat(num2str(i),'th',' rule');
+            if i==1
+                legrul{i}=strcat(num2str(i),'st',' rule');
+            elseif i==2
+                legrul{i}=strcat(num2str(i),'nd',' rule');
+            elseif i==3
+                legrul{i}=strcat(num2str(i),'rd',' rule');
+            else
+                legrul{i}=strcat(num2str(i),'th',' rule');
+            end
         else
             legrul{i}=strcat(num2str(J_max),'th',' rule');
         end

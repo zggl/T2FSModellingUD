@@ -2,7 +2,7 @@
 clc,clear
 s=2;
 n=s;
-J_max=10;
+J_max=8;
 DNum=21;
 if DNum<J_max
     error('Trainning data size must be >= %d',J_max)
@@ -79,7 +79,15 @@ for inputnum=1:n
     legrul={};    
     for i=1:J_max
         if i<J_max
-            legrul{i}=strcat(num2str(i),'th',' rule');
+            if i==1
+                legrul{i}=strcat(num2str(i),'st',' rule');
+            elseif i==2
+                legrul{i}=strcat(num2str(i),'nd',' rule');
+            elseif i==3
+                legrul{i}=strcat(num2str(i),'rd',' rule');
+            else
+                legrul{i}=strcat(num2str(i),'th',' rule');
+            end
         else
             legrul{i}=strcat(num2str(J_max),'th',' rule');
         end
